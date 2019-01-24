@@ -1,0 +1,42 @@
+//  protobuf.proto for final project
+//  Course: CS6740 Network Security
+//
+//  By: Xiang Zhang, Yunfan Tian
+
+syntax = "proto3";          // uses V3.0 of Protobuf
+
+// TypeNumber:
+    // 0 error
+    // 1 sign up
+    // 2 Log in, 21 success in server, 22 wrong password, 24 wrong challenge, 23 success in client
+    // 3 list
+    // 4 send someone request
+    // 10 is clients connectin establish
+    // 8 is message
+    // 99 logout, 100 logout confirm 101 102 103
+
+message MyProtocol {              // Protocol in chat application
+    int32 TypeNumber = 1; 
+    string Type = 2;
+    string UserName = 3;
+    string Password = 4;
+    string Chat_to = 5;
+    int32 Port = 6;
+    int32 C1 = 7;
+    int32 C2 = 8;
+    int32 N1 = 9;
+    int32 N2 = 10;
+    int32 Nb = 11;
+    string Sender_name = 12;
+    string Note = 13;
+    string Key = 14;
+    string Ticket = 15;
+    string Message = 16;
+    int32 Mod = 17;
+    float Time = 18;
+    string Key_client = 19;
+    string Iv_client = 20;
+    string Key_ab = 21;
+    string Iv_ab = 22;
+    string Error = 23;
+}
